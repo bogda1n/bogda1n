@@ -1,16 +1,37 @@
-## Hi there 👋
+```typescript
+class Bogdan {
+    role: string;
+    skills: string[];
+    projects: Record<string, string>;
+    socials: Record<string, string>;
 
-<!--
-**bogda1n/bogda1n** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    constructor() {
+        this.role = "Freelance Web Developer | QA Analyst";
+        this.skills = [
+            "Frontend: HTML, CSS, JavaScript, TypeScript, React, Vue",
+            "Backend: Node.js, Express, C# (.NET), Python (FastAPI, Flask)",
+            "Databases: MongoDB, NoSQL, PostgreSQL, MySQL",
+            "Testing: Selenium, Playwright, Jest, Cypress",
+            "DevOps: Docker, CI/CD, Git, AWS, Firebase",
+            "Other: SaaS Development, OCR (Tesseract), PyQt"
+        ];
+        this.projects = {
+            "Session-Based Test Management Platform": "Streamlining QA workflows",     
+            "Full-Stack SaaS App": "Coming soon...",
+            "Freelance Web Projects": "Building modern web applications and web sites"
+        };
+        this.socials = {
+            "GitHub": "https://github.com/bogda1n",
+            "LinkedIn": "https://www.linkedin.com/in/bogdan-dincă",
+        };
+    }
 
-Here are some ideas to get you started:
+    connect(): Record<string, string> {
+        return this.socials;
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    workOn(): Record<string, string> {
+        return this.projects;
+    }
+}
+
